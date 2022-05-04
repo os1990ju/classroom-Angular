@@ -1,0 +1,8 @@
+<img (load)="imgLoaded()"(error)="imgError()" width=200 [src]="img" alt="avatar original"
+*ngIf="img;
+else elseBlock">
+<ng-template #elseBlock>
+  <img [src]="imgDefault" alt="avatar">
+</ng-template>
+<!-- evento error-->
+<!-- load es el evento de img-->

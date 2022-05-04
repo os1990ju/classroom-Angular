@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component} from '@angular/core';
+import { Product } from './models/product.model';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'classroom';
+  imgParent = '';
+
+  onLoaded(img: string){
+   console.log('log padre'+img);
+
+  }
 }
