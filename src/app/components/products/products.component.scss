@@ -1,14 +1,17 @@
 .products--grid{
   display: flex;
   flex-direction: column;
+    text-align: justify;
+    grid-gap: 12px;
 }
+
 
 //tablets
 @media screen and (min-width: 40em) and (max-width: 63.9em){
   .products--grid{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 24px;
   }
 }
 
@@ -16,7 +19,58 @@
 @media screen and (min-width: 64em) {
   .products--grid{
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 24px;
   }
+}
+h1{
+  font-size: 32px;
+  font-weight: bold;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(231,197,173,1) 28%, rgba(0,212,255,1) 100%);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.search input[type=text]{
+  width:40%;
+  height:25px;
+  border-radius:25px;
+  border: black;
+}
+
+.search{
+  margin:7px;
+}
+
+.search button{
+  background-color: #0074D9;
+  color: #f2f2f2;
+  float: right;
+  padding: 5px 10px;
+  margin-right: 16px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius:25px;
+  border: black;
+  cursor: pointer;
+  transition: background-color .5s;
+}
+
+.search button:hover{
+  background-color: #3f96e2;
+  }
+
+
+.search form {
+  display:flex;
+  flex-direction:row;
+  justify-content:end;
+
+}
+.search form input{
+  margin-right: 10px;
+  font-size: 17px;
 }

@@ -3,4 +3,7 @@ export interface Product {
   name: string,
   image:string,
   price:number,
+  description?: string,
+  tag?:string,
+  dateExpiration?:Date
 }

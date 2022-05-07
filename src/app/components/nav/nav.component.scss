@@ -1,3 +1,4 @@
+
 .show-mobile {
   display: block;
   margin-bottom: 10px;
@@ -11,7 +12,26 @@
       border: 0;
       background: transparent;
     }
-  }
+    .icon-books{
+      z-index:1;
+      width: 20px;
+    }
+    .icon-school{
+      width: 50px;
+    }
+    a span{
+      background-color: #2c7ec5;
+      border-radius: 50%;
+      position: relative;
+      top: -21px;
+      left: -4px;
+      color: white;
+      font-size: 10px;
+      font-weight: bold;
+      padding: 3px;
+    }
+ }
+
   .side-menu{
     position: fixed;
     top:0;
@@ -38,7 +58,28 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
+    .icon-books{
+      z-index:1;
+      width: 20px;
+    }
+    .icon-school{
+      width: 50px;
+    }
+    a span{
+      background-color: #2c7ec5;
+      border-radius: 50%;
+      position: relative;
+      /* position: absolute; */
+      top: -21px;
+      left: -4px;
+      color: white;
+      font-size: 10px;
+      font-weight: bold;
+      padding: 3px;
+
+    }
+
+}
   .logo {
     margin-right: 1em;
   }
@@ -55,6 +96,9 @@
       }
     }
   }
+
+
+
   .info {
     display: flex;
     align-items: center;
@@ -64,7 +108,7 @@
   }
 }
 
-/* Medium only */
+/* Medium only*/
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
   .show-mobile {
     display: none;

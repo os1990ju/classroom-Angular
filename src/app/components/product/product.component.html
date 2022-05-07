@@ -1,3 +1,17 @@
-<app-img [img]="product.image"></app-img>
-<h2>Price: ${{product.price}}</h2>
-<p>{{product.name}}</p>
+
+<div class="card">
+  <div class="header-card">
+    <h2>{{product.name}}</h2>
+    <p>Disponible hasta: <strong>{{product.dateExpiration}}</strong></p>
+  </div>
+
+  <app-img [img]="product.image"></app-img>
+  <p>{{product.description}}</p>
+  <div class="button">
+    <button (click)="addToCart()" >Agregar Curso</button>
+    <button (click)="addToLocalStorage()">Visitar</button>
+  </div>
+  <div class="botom-card">
+    <p>Etiqueta: {{product.tag}}</p>
+  </div>
+</div>

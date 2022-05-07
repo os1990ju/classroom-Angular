@@ -1,4 +1,4 @@
-import { Component, OnInit, Input} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import { Product } from '../../models/product.model';
 @Component({
   selector: 'app-product',
@@ -6,7 +6,8 @@ import { Product } from '../../models/product.model';
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent implements OnInit {
-
+  active = "false";
+  @Output() itemAdded = new EventEmitter<Product>(); //info tipo product
   @Input() product:Product = {
     id: '',
     name: '',
@@ -14,9 +15,25 @@ export class ProductComponent implements OnInit {
     price:0,
 
   }
-  constructor() { }
+  constructor() {
+    this.addToLocalStorage;
+    this.getLocalStorage()
+
+  }
 
   ngOnInit(): void {
+  }
+  addToCart(){
+    this.itemAdded.emit(this.product);
+
+
+  }
+  addToLocalStorage(){
+
+    localStorage.setItem("false",this.active);
+  }
+  getLocalStorage(){
+    return localStorage.getItem("active")
   }
 
 }

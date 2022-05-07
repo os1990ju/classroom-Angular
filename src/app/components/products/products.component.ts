@@ -1,53 +1,37 @@
-import { Component, OnInit } from '@angular/core';
-import {Product} from '../../models/product.model'
+import { Component, OnInit, Input} from '@angular/core';
+import {Product} from '../../models/product.model';
+import {RoomService} from '../../Services/room.service';
+import { ProductsService } from '../../Services/products.service';
+
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
+  filterItem = '';
+  total:number = 0;
+  listToItems: Product[]=[];
+  @Input() products: Product[] = [ ]
+   //se accesibilidad del servicio es privado
+  constructor(
+    private roomService: RoomService,
+    private productService: ProductsService) {
 
-  products: Product[] = [
-    {
-       id:'1',
-       name : 'producto 1',
-       image: '../assets/img/product1.jpg',
-       price:200
-     },
-    {
-       id:'1',
-       name : 'producto 2',
-       image: '../assets/img/product1.jpg',
-       price:200
-     },
-     {
-       id:'1',
-       name : 'producto 3',
-       image: '../assets/img/product1.jpg',
-       price:200
-     },
-    {
-       id:'1',
-       name : 'producto 4',
-       image: '../assets/img/product1.jpg',
-       price:200
-     },
-     {
-       id:'1',
-       name : 'producto 5',
-       image: '../assets/img/product1.jpg',
-       price:200
-     },
-    {
-       id:'1',
-       name : 'producto 6',
-       image: '../assets/img/product1.jpg',
-       price:200
-     },
-   ]
-  constructor() { }
-
-  ngOnInit(): void {
+    this.listToItems = roomService.getListToItems();
   }
+
+ ngOnInit(): void {
+
+ }
+
+  onAddToList(product: Product){
+
+    this.roomService.addItem(product);
+    this.total = this.roomService.getTotal();
+  }
+
+
+
 
 }
