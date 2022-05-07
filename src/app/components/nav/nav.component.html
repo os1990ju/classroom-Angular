@@ -3,10 +3,10 @@
     <button (click)="toggleMenu()">
       <img src="./assets/svg/icon_menu.svg" alt="menu">
     </button>
-    <a href="">
+    <a routerLink="/home">
       <img class="icon-school" src="./assets/svg/logo_yard_sale.svg" alt="logo">
     </a>
-    <a href="">
+    <a routerLink="/home">
       <img class="icon-books" src="./assets/svg/icon_shopping_cart.svg" alt="logo">
       <span>{{counter}} </span>
     </a>
@@ -14,29 +14,27 @@
   <div [class.active]="activeMenu" class="side-menu">
     <button (click)="toggleMenu()"> close </button>
       <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Jornadas</a></li>
-        <li><a href="#">Profesores</a></li>
+        <li><a routerLink="/home">Inicio</a></li>
+        <li><a routerLink="/category">Cursos</a></li>
       </ul>
   </div>
 </div>
 <div class="hide-mobile">
   <div>
     <nav>
-      <a class="logo" href="#">
+      <a class="logo" routerLink="/home">
         <img class="icon-school" src="./assets/svg/logo_yard_sale.svg" alt="logo">
       </a>
       <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a routerLinkActive="active" routerLink="/category">Cursos</a></li>
-        <li><a href="#">Profesores</a></li>
+        <li><a routerLink="/home">Inicio</a></li>
+        <li><a routerLink="/category">Cursos</a></li>
       </ul>
     </nav>
 
     <div class="info">
       <div class="account">nicolas@nicolas.com</div>
       <div>
-        <a href="">
+        <a routerLink="/home">
           <img class="icon-books" src="./assets/svg/icon_shopping_cart.svg" alt="logo">
           <span>{{counter}} </span>
         </a>
@@ -44,3 +42,4 @@
     </div>
   </div>
 </div>
+

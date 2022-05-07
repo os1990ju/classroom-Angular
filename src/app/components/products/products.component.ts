@@ -13,6 +13,7 @@ export class ProductsComponent implements OnInit {
   total:number = 0;
   listToItems: Product[]=[];
   @Input() products: Product[] = [ ]
+
    //se accesibilidad del servicio es privado
   constructor(
     private roomService: RoomService,
@@ -30,8 +31,4 @@ export class ProductsComponent implements OnInit {
     this.roomService.addItem(product);
     this.total = this.roomService.getTotal();
   }
-
-
-
-
 }

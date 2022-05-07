@@ -21,6 +21,10 @@ const routes: Routes = [
     path: 'category',
     component: CategoryComponent
   },
+  {
+    path: 'register',
+    component: RegisterComponent
+  },
 ];
 
 @NgModule({

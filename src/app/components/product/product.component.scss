@@ -36,6 +36,23 @@ h2{
   -webkit-box-shadow: 0px 10px 13px -7px #000000, 1px 1px 13px -4px rgba(0,0,0,0);
 box-shadow: 0px 10px 13px -7px #000000, 1px 1px 13px -4px rgba(0,0,0,0);
 }
+.class-button{
+  text-decoration: none;
+  margin: 10px 0px 0px 10px;
+  background-color: #3585ca;
+  color: black;
+  border: 2px solid #2377c0;
+  border-radius: 7px;
+  padding: 10px 5px 10px 5px;
+  transition-duration: 0.5s;
+  margin: 10px;
+  width: max-content;
+}
+.class-button:hover{
+  background-color: #4694d8;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 1px 1px 13px -4px rgba(0,0,0,0);
+box-shadow: 0px 10px 13px -7px #000000, 1px 1px 13px -4px rgba(0,0,0,0);
+}
 .card{
   border: none;
   padding: 10px;
@@ -47,4 +64,10 @@ box-shadow: 0px 10px 13px -7px #000000, 1px 1px 13px -4px rgba(0,0,0,0);
   text-align: center;
   margin: 15px;
   font-weight: 900;
+  .active{
+display: none;
+
+    }
 }
+
+

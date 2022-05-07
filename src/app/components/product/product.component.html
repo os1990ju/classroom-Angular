@@ -9,9 +9,11 @@
   <p>{{product.description}}</p>
   <div class="button">
     <button (click)="addToCart()" >Agregar Curso</button>
-    <button (click)="addToLocalStorage()">Visitar</button>
+    <div class="class-button">
+      <form routerLink="/register" (click)="toggleMenu()">visitar</form>
+    </div>
   </div>
   <div class="botom-card">
-    <p>Etiqueta: {{product.tag}}</p>
+    <p >Etiqueta: {{product.tag}}</p>
   </div>
 </div>

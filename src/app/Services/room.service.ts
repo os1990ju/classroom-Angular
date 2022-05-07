@@ -23,7 +23,4 @@ export class RoomService {
   getListToItems(){
     return this.listToItems;
   }
-
-
-
 }
